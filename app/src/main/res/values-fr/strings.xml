@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UltimateGymApp</string>
+
+    <string name="cardview_training_training_name">Nom du training</string>
+
+    <string name="label_edit">Modifier</string>
+
+
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UltimateGymApp</string>
+
+    <string name="cardview_training_training_name">Name of training</string>
+
+    <string name="label_edit">Edit</string>
+</resources>
