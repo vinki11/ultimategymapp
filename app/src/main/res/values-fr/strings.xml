@@ -6,5 +6,6 @@
 
     <string name="label_edit">Modifier</string>
 
-
+    <string name="new_program_training_name">Nom du programme</string>
+    <string name="new_program_number_week">Nombre de semaines</string>
 </resources>

@@ -1,5 +1,6 @@
 package vincent.ultimategymapp.activity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -82,6 +83,14 @@ public class ListeProgramActivity extends AppCompatActivity implements RecyclerV
 
     }
 
+    public void onButtonClick(View v){
+        switch (v.getId()){
+            case R.id.btn_add_new_program:
+                addNewProgram();
+                break;
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -121,5 +130,10 @@ public class ListeProgramActivity extends AppCompatActivity implements RecyclerV
 
     @Override
     public void onItemLongPress(View childView, int position) {
+    }
+
+    private void addNewProgram(){
+        Intent intent = new Intent(this, NewProgramMainActivity.class);
+        startActivity(intent);
     }
 }

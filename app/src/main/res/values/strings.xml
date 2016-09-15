@@ -4,4 +4,11 @@
     <string name="cardview_training_training_name">Name of training</string>
 
     <string name="label_edit">Edit</string>
+
+    <string name="new_program_training_name">Training name</string>
+    <string name="new_program_number_week">Number of weeks</string>
+    <string name="title_activity_new_program_main">NewProgramMainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -7,7 +7,7 @@ import android.provider.BaseColumns;
  */
 public final class DatabaseModel {
 
-    // To prWorkout someone from accidentally instantiating the contract class
+    // To prprogram someone from accidentally instantiating the contract class
     public DatabaseModel() {
     }
 
@@ -16,21 +16,21 @@ public final class DatabaseModel {
     public static final String AS_INT = " INTEGER ";
     public static final String AS_BLOB = " BLOB ";
 
-    //Tables des workouts
-    public static abstract class Workout implements BaseColumns {
-        public static final String TABLE_NAME = "Workout";
+    //Tables des programs
+    public static abstract class Program implements BaseColumns {
+        public static final String TABLE_NAME = "Program";
         public static final String ID = "id";
         public static final String NOM = "nom";
         public static final String NOMBRE_SEMAINE = "nb_semaine";
         public static final String ACTIF = "actif";
-        public static final String CREATE_TABLE = "CREATE TABLE " + Workout.TABLE_NAME
+        public static final String CREATE_TABLE = "CREATE TABLE " + Program.TABLE_NAME
                 + " ("
-                + Workout.ID + AS_INT_PK + ", "
-                + Workout.NOM + AS_TEXT + ", "
-                + Workout.NOMBRE_SEMAINE + AS_INT + ", "
-                + Workout.ACTIF + AS_INT
+                + Program.ID + AS_INT_PK + ", "
+                + Program.NOM + AS_TEXT + ", "
+                + Program.NOMBRE_SEMAINE + AS_INT + ", "
+                + Program.ACTIF + AS_INT
                 + "); ";
-        public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + Workout.TABLE_NAME + "; ";
+        public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + Program.TABLE_NAME + "; ";
     }
 
     //Tables des jours
@@ -46,19 +46,19 @@ public final class DatabaseModel {
         public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + Jour.TABLE_NAME + "; ";
     }
 
-    //Tables des jours_workout
-    public static abstract class Jour_workout implements BaseColumns {
-        public static final String TABLE_NAME = "Jour_Workout";
-        public static final String ID_WORKOUT = "id_workout";
+    //Tables des jours_program
+    public static abstract class Jour_Program implements BaseColumns {
+        public static final String TABLE_NAME = "Jour_program";
+        public static final String ID_PROGRAM = "ID_PROGRAM";
         public static final String ID_JOUR = "id_jour";
         public static final String ORDRE = "ordre";
-        public static final String CREATE_TABLE = "CREATE TABLE " + Jour_workout.TABLE_NAME
+        public static final String CREATE_TABLE = "CREATE TABLE " + Jour_Program.TABLE_NAME
                 + " ("
-                + Jour_workout.ID_WORKOUT + AS_INT + ", "
-                + Jour_workout.ID_JOUR + AS_INT + ", "
-                + Jour_workout.ORDRE + AS_INT
+                + Jour_Program.ID_PROGRAM + AS_INT + ", "
+                + Jour_Program.ID_JOUR + AS_INT + ", "
+                + Jour_Program.ORDRE + AS_INT
                 + "); ";
-        public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + Jour_workout.TABLE_NAME + "; ";
+        public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + Jour_Program.TABLE_NAME + "; ";
     }
 
 }

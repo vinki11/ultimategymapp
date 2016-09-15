@@ -39,24 +39,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (database == null)
             database = db;
 
-        db.execSQL(DatabaseModel.Workout.CREATE_TABLE);
+        db.execSQL(DatabaseModel.Program.CREATE_TABLE);
         db.execSQL(DatabaseModel.Jour.CREATE_TABLE);
-        db.execSQL(DatabaseModel.Jour_workout.CREATE_TABLE);
+        db.execSQL(DatabaseModel.Jour_Program.CREATE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(DatabaseModel.Workout.DROP_TABLE);
+        db.execSQL(DatabaseModel.Program.DROP_TABLE);
         db.execSQL(DatabaseModel.Jour.DROP_TABLE);
-        db.execSQL(DatabaseModel.Jour_workout.DROP_TABLE);
+        db.execSQL(DatabaseModel.Jour_Program.DROP_TABLE);
         onCreate(db);
     }
 
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(DatabaseModel.Workout.DROP_TABLE);
+        db.execSQL(DatabaseModel.Program.DROP_TABLE);
         db.execSQL(DatabaseModel.Jour.DROP_TABLE);
-        db.execSQL(DatabaseModel.Jour_workout.DROP_TABLE);
+        db.execSQL(DatabaseModel.Jour_Program.DROP_TABLE);
         onCreate(db);
     }
 }
